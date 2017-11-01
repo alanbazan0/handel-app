@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>41206466-5723-4209-8394-477434caa9d9</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HandelApp.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Constantes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\ParametroHTTP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\RepositorioBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clases\Resultado.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelos\Cliente.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelos\OpcionMenu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelos\Usuario.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presentadores\AgentePresentador.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presentadores\InicioSesionPresentador.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Presentadores\MenuPresentador.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositorios\ClientesRepositorio.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositorios\MenuServicioDatos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositorios\RepositorioBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositorios\ServicioDatos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositorios\UsuarioServicioDatos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vistas\IAgenteVista.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vistas\IInicioSesionVista.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vistas\IMenuVista.cs" />
+  </ItemGroup>
+</Project>
