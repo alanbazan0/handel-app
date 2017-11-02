@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AgenteApp.Views;
-using AgenteApp.Modelos;
+using HandelApp.Views;
+using HandelApp.Modelos;
 
-namespace AgenteApp.Presenters
+namespace HandelApp.Presenters
 {
     public class InicioSesionPresentador
     {

@@ -13,7 +13,7 @@ namespace HandelApp
 		{
 			InitializeComponent();
 
-			MainPage = new HandelApp.MainPage();
+            MainPage = new HandelApp.InicioSesionPage();
 		}
 
 		protected override void OnStart ()

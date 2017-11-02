@@ -140,6 +140,6 @@ namespace HandelApp.DataAccess
             get;
             set;
         }
-        public MetodoHTTP Metodo { get; set; }
+       // public MetodoHTTP Metodo { get; set; }
     }
 }

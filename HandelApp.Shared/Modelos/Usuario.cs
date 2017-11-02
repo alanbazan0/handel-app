@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgenteApp.Modelos
+namespace HandelApp.Modelos
 {
     public class Usuario
     {

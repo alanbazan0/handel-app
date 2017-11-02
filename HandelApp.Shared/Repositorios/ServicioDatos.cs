@@ -3,9 +3,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using AgenteApp.Clases;
+using HandelApp.Clases;
 
-namespace AgenteApp.DataAccess
+namespace HandelApp.DataAccess
 {
     public class Repositorio<T>
     {
