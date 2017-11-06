@@ -5,11 +5,8 @@ using System.Text;
 namespace HandelApp.Modelos
 {
     public class Usuario
-    {
-        private string id;
-        private string nombre;
-        public string Id { get { return id; } set { id = value; } }
-        public string Nombre { get { return nombre; } set { nombre = value; } }
-
+    {      
+        public string Id { get; set; }
+        public string CorreoElectronico { get; set; }
     }
 }

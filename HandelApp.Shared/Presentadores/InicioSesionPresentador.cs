@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HandelApp.Views;
+using HandelApp.Vistas;
 using HandelApp.Modelos;
+using HandelApp.Repositorios;
+using HandelApp.Clases;
 
-namespace HandelApp.Presenters
+namespace HandelApp.Presentadores
 {
     public class InicioSesionPresentador
     {
         private IInicioSesionVista vista;
-        private Usuario usuario;
+        private Usuario usuario=null;
         public InicioSesionPresentador(IInicioSesionVista vista)
         {
             this.vista = vista;
@@ -17,15 +19,21 @@ namespace HandelApp.Presenters
 
         public async void IniciarSesion()
         {
-            UsuarioRepositorio accesoDatos = new UsuarioRepositorio();
-            usuario = await accesoDatos.Consultar(vista.NombreUsuario, vista.Contrasena);
-         
-            if(usuario!=null)
-            {               
-                vista.MostrarMenu(usuario);
+            UsuarioRepositorio repositorio = new UsuarioRepositorio();
+            Resultado<Usuario> resultado = await repositorio.ConsultarAcceso(vista.Credenciales);
+            if(resultado.MensajeError==string.Empty)
+            {
+                usuario = resultado.Valor;
+                if (usuario != null)
+                {
+                    vista.MostrarMenu(usuario);
+                    vista.MostrarMensaje("Bienvenido.");
+                }
+                else
+                    vista.MostrarMensaje("La combinación de usuario y contraseña es incorrecta.");
             }
             else
-                vista.MostrarMensaje("La combinación de usuario y contraseña es incorrecta.");
+                vista.MostrarMensaje(resultado.MensajeError);
 
 
         }

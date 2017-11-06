@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HandelApp.InicioSesionPage">
-	<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Sign Up" Clicked="OnSignUpButtonClicked" />
-    </ContentPage.ToolbarItems>
+	
     <ContentPage.Content>
-        <StackLayout VerticalOptions="StartAndExpand">
-            <Label Text="Username" />
-            <Entry x:Name="usernameEntry" Placeholder="username" />
-            <Label Text="Password" />
-            <Entry x:Name="passwordEntry" IsPassword="true" />
-            <Button Text="Login" Clicked="OnLoginButtonClicked" />
-            <Label x:Name="messageLabel" />
+        <StackLayout VerticalOptions="Center">
+            <Entry x:Name="idEntry" Placeholder="Usuario" />
+            <Entry x:Name="contrasenaEntry" Placeholder="Contraseña" IsPassword="true" />
+            <Button Text="Iniciar sesión" Clicked="OnIniciarSesionButtonClicked" />
+            <Label x:Name="mensajeLabel" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

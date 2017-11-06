@@ -2,46 +2,57 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using HandelApp.Presentadores;
+using HandelApp.Vistas;
+using HandelApp.Modelos;
 
 namespace HandelApp
 {
-    public partial class InicioSesionPage : ContentPage
+    public partial class InicioSesionPage : ContentPage, IInicioSesionVista
     {
+        InicioSesionPresentador presentador;
+
+       
+        public object Credenciales 
+        {
+            get
+            {
+                var credenciales = new
+                {
+                    id = idEntry.Text,
+                    contrasena = contrasenaEntry.Text
+                };
+                return credenciales;
+            }
+        }
+
         public InicioSesionPage()
         {
             InitializeComponent();
+            presentador = new InicioSesionPresentador(this);
         }
-
-        async void OnSignUpButtonClicked(object sender, EventArgs e)
+       
+        void OnIniciarSesionButtonClicked(object sender, EventArgs e)
         {
-           // await Navigation.PushAsync(new SignUpPage());
+            IniciarSesion();
         }
 
-        async void OnLoginButtonClicked(object sender, EventArgs e)
+        public void IniciarSesion()
         {
-        //    var user = new User
-        //    {
-        //        Username = usernameEntry.Text,
-        //        Password = passwordEntry.Text
-        //    };
-
-        //    var isValid = AreCredentialsCorrect(user);
-        //    if (isValid)
-        //    {
-        //        App.IsUserLoggedIn = true;
-        //        Navigation.InsertPageBefore(new MainPage(), this);
-        //        await Navigation.PopAsync();
-        //    }
-        //    else
-        //    {
-        //        messageLabel.Text = "Login failed";
-        //        passwordEntry.Text = string.Empty;
-        //    }
+            mensajeLabel.Text = "";
+            presentador.IniciarSesion();
         }
 
-        //bool AreCredentialsCorrect(User user)
-        //{
-        //    return true;
-        //}
+        public void MostrarMenu(Usuario usuario)
+        {
+            
+        }
+
+        public void MostrarMensaje(string mensaje)
+        {
+            mensajeLabel.Text = mensaje;
+        }
+
+   
     }
 }

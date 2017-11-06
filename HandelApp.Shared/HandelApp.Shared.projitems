@@ -15,8 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Clases\Resultado.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Modelos\Usuario.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Presentadores\InicioSesionPresentador.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Repositorios\UsuarioServicioDatos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositorios\UsuarioRepositorio.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Vistas\IInicioSesionVista.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Modelos\User.cs" />
   </ItemGroup>
 </Project>
